@@ -1,0 +1,8 @@
+# Copyright (c) 2022 Andrei Gaevskii
+# SPDX-License-Identifier: MIT
+
+config SHIELD_SOPHIE_LEFT
+	def_bool $(shields_list_contains,sophie_left)
+
+config SHIELD_SOPHIE_RIGHT
+	def_bool $(shields_list_contains,sophie_right)
