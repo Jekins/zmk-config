@@ -25,7 +25,7 @@
            tapping-term-ms = <300>;
            bindings = <&kp LG(C)>, <&kp LG(P)>;
        };
-       td2: tap_dance_1 {
+       td2: tap_dance_2 {
            compatible = "zmk,behavior-tap-dance";
            label = "TAP_DANCE_2";
            #binding-cells = <0>;
