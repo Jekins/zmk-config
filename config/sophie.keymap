@@ -22,14 +22,14 @@
            compatible = "zmk,behavior-tap-dance";
            label = "TAP_DANCE_1";
            #binding-cells = <0>;
-           tapping-term-ms = <300>;
+           tapping-term-ms = <200>;
            bindings = <&kp LG(C)>, <&kp LG(V)>;
        };
        td2: tap_dance_2 {
            compatible = "zmk,behavior-tap-dance";
            label = "TAP_DANCE_2";
            #binding-cells = <0>;
-           tapping-term-ms = <300>;
+           tapping-term-ms = <200>;
            bindings = <&kp LG(Z)>, <&kp LG(X)>, <&kp LS(LG(X))>;
        };
     };
@@ -59,7 +59,7 @@
 &kp ESC    &kp Q    &kp W   &td0       &kp R     &kp T                                                   &kp Y     &kp U     &kp I      &kp O    &kp P       &kp LBKT
 &kp TAB    &kp A    &kp S   &kp D      &kp F     &kp G                                                   &kp H     &kp J     &kp K      &kp L    &kp SEMI    &kp SQT
 &kp LALT   &kp Z    &kp X   &kp C      &kp V     &kp B     &kp LG(SPACE)                       &kp BSPC  &kp N     &kp M     &kp COMMA  &kp DOT  &kp C_MUTE  &kp C_PP
-                            &kp LCTRL  &td1      &kp LGUI  &tog 2        &kp SPACE   &kp ENTER &sl 1     &sk LSHFT &td2      &kp LG(LSHFT)
+                            &kp LCTRL  &td1      &kp LGUI  &mo 2         &kp SPACE   &kp ENTER &sl 1     &sk LSHFT &td2      &kp LG(LSHFT)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
