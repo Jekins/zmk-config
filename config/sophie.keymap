@@ -56,10 +56,10 @@
 //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
             bindings = <
 &kp GRAVE  &kp N1   &kp N2  &kp N3     &kp N4    &kp N5                                                  &kp N6    &kp N7    &kp N8     &kp N9   &kp N0      &kp RBKT
-&kp ESC    &kp Q    &kp W   &td0       &kp R     &kp T                                                   &kp Y     &kp U     &kp I      &kp O    &kp P       &kp LBKT
+&kp ESC    &kp Q    &kp W   &kp E      &kp R     &kp T                                                   &kp Y     &kp U     &kp I      &kp O    &kp P       &kp LBKT
 &kp TAB    &kp A    &kp S   &kp D      &kp F     &kp G                                                   &kp H     &kp J     &kp K      &kp L    &kp SEMI    &kp SQT
 &kp LALT   &kp Z    &kp X   &kp C      &kp V     &kp B     &kp LG(SPACE)                       &kp BSPC  &kp N     &kp M     &kp COMMA  &kp DOT  &kp C_MUTE  &kp C_PP
-                            &kp LCTRL  &td1      &kp LGUI  &mo 2         &kp SPACE   &kp ENTER &sl 1     &sk LSHFT &td2      &kp LG(LSHFT)
+                            &kp LCTRL  &kp LG(C) &kp LGUI  &mo 2         &kp SPACE   &kp ENTER &sl 1     &sk LSHFT &LG(Z)    &kp LG(LSHFT)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -79,15 +79,15 @@
 // |  ALT  |   ^   |   !   |   %   |   "   |   '   | COPY  |                    |  RGB  |   <   |   >   |   *   |   #   |   /   | PAUSE |
 // |       |       |       |       |       |       | PASTE |                    | TOGGLE|       |       |       |       |       |       |
 // |-------+-------+-------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-------+-------+-------|
-//                         |  CTRL | COPY  |  GUI  | RAISE | SPACE |    | ENTER | LOWER | SHIFT | UNDO  |  SCRN |
-//                         |       | PASTE |       |       |       |    |       |       |       | CUT   |       |
+//                         |  CTRL | PASTE |  GUI  | RAISE | SPACE |    | ENTER | LOWER | SHIFT | UNDO  |  SCRN |
+//                         |       |       |       |       |       |    |       |       |       | CUT   |       |
 //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
             bindings = <
 &kp F12   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                                     &kp F6    &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
 &trans    &kp GRAVE  &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS                                                   &kp LBKT  &kp RBKT  &kp COLON  &kp SEMI  &kp BSLH  &kp TILDE
 &trans    &kp DLLR   &kp AMPS   &kp QMARK  &kp COMMA  &kp DOT                                                    &kp LBRC  &kp RBRC  &kp LPAR   &kp RPAR  &kp PIPE  &kp AT
 &trans    &kp CARET  &kp EXCL   &kp PRCNT  &kp DQT    &kp SQT    &trans                          &rgb_ug RGB_TOG &kp LT    &kp GT    &kp STAR   &kp HASH  &kp FSLH  &trans
-                                &trans     &trans     &kp LS(N6) &kp LS(N7) &kp LS(N3)   &trans  &trans          &trans    &trans    &trans
+                                &trans     &kp LG(V)  &kp LS(N6) &kp LS(N7) &kp LS(N3)   &trans  &trans          &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -95,27 +95,27 @@
 
         raise_layer {
 // |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
-// |   `   |  BT1  |  BT2  |  BT3  |   $   |   %   |                                    |   ^   |   &   |   *   |   (   |   )   |   }   |
-// |       |       |       |       |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |   ]   |
+// |  BT   |  BT1  |  BT2  |  BT3  |   $   |   %   |                                    |   ^   |   &   |   *   |   (   |   )   |   }   |
+// | CLEAR |       |       |       |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |   ]   |
 // |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
 // |  ESC  | SWITCH|SEL ALL| UNSEL |SEL WRD|NXT WRD|                                    |REPLACE|  HOME |   UP  |  END  |  PGUP |   {   |
 // |       | WINDOW|  LEFT | SCOPE |  LEFT |  LEFT |                                    |       |       |       |       |       |   [   |
 // |-------+-------+-------+-------+-------+-------|                                    |-------+-------+-------+-------+-------+-------|
-// |  TAB  | RENAME|SEL ALL|  SEL  |SEL WRD|NXT WRD|                                    |  FIND |  LEFT |  DOWN | RIGHT |  PGDN |  VOL  |
-// |       |       | RIGHT | SCOPE | RIGHT | RIGHT |                                    |       |       |       |       |       |  UP   |
+// |  TAB  | RENAME|SEL ALL|  SEL  |SEL WRD|NXT WRD|                                    |  LAST |  LEFT |  DOWN | RIGHT |  PGDN |  VOL  |
+// |       |       | RIGHT | SCOPE | RIGHT | RIGHT |                                    |  EDIT |       |       |       |       |  UP   |
 // |-------+-------+-------+-------+-------+-------+-------|                    |-------+-------+-------+-------+-------+-------+-------|
 // |  ALT  |COMMENT|COMMENT| GO TO |CHANGE | DPLCT |SHOW   |                    | BKSPC | PREV  | NEXT  | SHOW  | SHOW  | MUTE  |  VOL  |
 // |       |       |BLOCK  | SRC   |LINE   |       |IMPORTS|                    |       | PLACE | PLACE | NEXT  | VARS  |       |  DOWN |
 // |-------+-------+-------+-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------+-------+-------+-------|
-//                         |  CTRL | COPY  |  GUI  | RAISE | SPACE |    | ENTER | LOWER | SHIFT | UNDO  |  SCRN |
-//                         |       | PASTE |       |       |       |    |       |       |       | CUT   |       |
+//                         |  CTRL | COPY  |  GUI  | RAISE | SPACE |    | ENTER | LOWER | SHIFT | CUT   |  SCRN |
+//                         |       | PASTE |       |       |       |    |       |       |       |       |       |
 //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &trans            &trans                                                &trans       &trans        &trans    &trans        &trans      &trans
-&trans      &kp LG(TILDE) &kp LS(LG(LEFT))  &kp LA(UP)    &kp LS(LA(LEFT))  &kp LA(LEFT)                                          &kp LG(R)    &kp HOME      &kp UP    &kp END       &kp PG_UP   &trans
-&trans      &kp LS(F6)    &kp LS(LG(RIGHT)) &kp LA(DOWN)  &kp LS(LA(RIGHT)) &kp LA(RIGHT)                                         &kp LG(F)    &kp LEFT      &kp DOWN  &kp RIGHT     &kp PG_DN   &kp C_VOL_UP
-&trans      &kp LG(FSLH)  &kp LG(LA(FSLH))  &kp LG(B)     &kp LS(LALT)      &kp LG(D)     &kp LA(ENTER)                   &trans  &kp LG(LBKT) &kp LG(RBKT)  &kp LG(G) &kp LC(SPACE) &trans      &kp C_VOL_DN
-                                            &trans        &trans            &trans        &trans        &trans   &trans   &trans  &trans       &trans        &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &trans            &trans                                                &trans              &trans        &trans    &trans        &trans      &trans
+&trans      &kp LG(TILDE) &kp LS(LG(LEFT))  &kp LA(UP)    &kp LS(LA(LEFT))  &kp LA(LEFT)                                          &kp LG(EQUAL)       &kp HOME      &kp UP    &kp END       &kp PG_UP   &trans
+&trans      &kp LS(F6)    &kp LS(LG(RIGHT)) &kp LA(DOWN)  &kp LS(LA(RIGHT)) &kp LA(RIGHT)                                         &kp LG(MINUS)       &kp LEFT      &kp DOWN  &kp RIGHT     &kp PG_DN   &kp C_VOL_UP
+&trans      &kp LG(FSLH)  &kp LG(LA(FSLH))  &kp LG(LALT)     &kp LS(D)      &kp LG(B)     &kp LA(ENTER)                   &trans  &kp LG(LSHFT(BSPC)) &kp LG(RBKT)  &kp LG(G) &kp LC(SPACE) &trans      &kp C_VOL_DN
+                                            &trans        &trans            &trans        &trans        &trans   &trans   &trans  &trans              &kp LG(X)     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
