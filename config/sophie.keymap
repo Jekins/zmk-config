@@ -87,11 +87,11 @@
 //                         |       | PASTE |       |       |       |    |       |       |       |       |       |
 //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &trans            &trans                                                &trans              &trans        &trans    &trans        &trans      &trans
-&trans      &kp LG(TILDE) &kp LS(LG(LEFT))  &kp LA(UP)    &kp LS(LA(LEFT))  &kp LA(LEFT)                                          &kp LG(EQUAL)       &kp HOME      &kp UP    &kp END       &kp PG_UP   &trans
-&trans      &kp LS(F6)    &kp LS(LG(RIGHT)) &kp LA(DOWN)  &kp LS(LA(RIGHT)) &kp LA(RIGHT)                                         &kp LG(MINUS)       &kp LEFT      &kp DOWN  &kp RIGHT     &kp PG_DN   &kp C_VOL_UP
-&trans      &kp LG(FSLH)  &kp LG(LA(FSLH))  &kp LG(LALT)  &kp LG(D)         &kp LG(B)     &kp LA(ENTER)                   &trans  &kp LS(LG(BSPC))    &kp LG(RBKT)  &kp LG(G) &kp LC(SPACE) &trans      &kp C_VOL_DN
-                                            &trans        &trans            &trans        &trans        &trans   &trans   &trans  &trans              &kp LG(X)     &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &trans            &trans                                                &trans         &trans        &trans               &trans        &trans      &trans
+&trans       &kp LG(TILDE) &kp LS(LG(LEFT))  &kp LA(UP)    &kp LS(LA(LEFT))  &kp LA(LEFT)                                          &kp LG(EQUAL)  &kp HOME      &kp UP               &kp END       &kp PG_UP   &trans
+&trans       &kp LS(F6)    &kp LS(LG(RIGHT)) &kp LA(DOWN)  &kp LS(LA(RIGHT)) &kp LA(RIGHT)                                         &kp LG(MINUS)  &kp LEFT      &kp DOWN             &kp RIGHT     &kp PG_DN   &kp C_VOL_UP
+&kp LS(LALT) &kp LG(FSLH)  &kp LG(LA(FSLH))  &kp LG(LALT)  &kp LG(D)         &kp LG(B)     &kp LA(ENTER)                   &trans  &kp LG(LBKT)   &kp LG(RBKT)  &kp LG(LSHFT(BSPC))  &kp LC(SPACE) &trans      &kp C_VOL_DN
+                                            &trans        &trans            &trans        &trans        &trans   &trans   &trans  &trans         &kp LG(X)     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
