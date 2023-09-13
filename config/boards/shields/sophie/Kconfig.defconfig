@@ -32,15 +32,19 @@ endif # ZMK_DISPLAY
 if LVGL
 
 config LVGL_VDB_SIZE
+    int
 	default 64
 
 config LVGL_DPI
+    int
 	default 148
 
 config LVGL_BITS_PER_PIXEL
+    int
 	default 1
 
 choice LVGL_COLOR_DEPTH
+    int
 	default LVGL_COLOR_DEPTH_1
 endchoice
 
