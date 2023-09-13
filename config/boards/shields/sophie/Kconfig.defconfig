@@ -44,8 +44,9 @@ config LVGL_BITS_PER_PIXEL
 	default 1
 
 choice LVGL_COLOR_DEPTH
-    int
+    bool
 	default LVGL_COLOR_DEPTH_1
+    depends on <choice LVGL_COLOR_DEPTH: Color Depth>
 endchoice
 
 endif # LVGL
