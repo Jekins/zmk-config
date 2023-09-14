@@ -41,7 +41,7 @@ config LVGL_DPI
 
 config LVGL_BITS_PER_PIXEL
     int
-	default 1
+	default bool "1-bit"
 
 choice LVGL_COLOR_DEPTH
     bool
