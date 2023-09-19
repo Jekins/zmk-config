@@ -87,7 +87,7 @@
 //                         |       | PASTE |       |       |       |    |       |       |       |       |       |
 //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
             bindings = <
-&trans       &trans        &trans            &kp LG(LS(3)) &kp LG(LS(4))     &kp LG(LS(3)                                          &trans         &trans        &bt BT_SEL 0         &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR
+&trans       &trans        &trans            &kp LG(LS(3)) &kp LG(LS(4))     &kp LG(LS(3))                                         &trans         &trans        &bt BT_SEL 0         &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR
 &trans       &kp LG(TILDE) &kp LS(LG(LEFT))  &kp LA(UP)    &kp LS(LA(LEFT))  &kp LA(LEFT)                                          &kp LG(EQUAL)  &kp HOME      &kp UP               &kp END       &kp PG_UP     &kp C_PP
 &trans       &kp LS(F6)    &kp LS(LG(RIGHT)) &kp LA(DOWN)  &kp LS(LA(RIGHT)) &kp LA(RIGHT)                                         &kp LG(MINUS)  &kp LEFT      &kp DOWN             &kp RIGHT     &kp PG_DN     &kp C_VOL_UP
 &kp LS(LALT) &kp LG(FSLH)  &kp LG(LA(FSLH))  &kp LG(LALT)  &kp LG(D)         &kp LG(B)     &kp LA(ENTER)                   &trans  &kp LG(LBKT)   &kp LG(RBKT)  &kp LG(LS(BSPC))     &kp LC(SPACE) &trans        &kp C_VOL_DN
