@@ -11,13 +11,13 @@
 
 / {
     macros {
-       lgui_layer {
-           compatible = "zmk,macro";
-           label = "LGUI_LAYER";
-           tap-ms = <0>;
-           bindings = <&kp LGUI &mo 2>;
-       };
-   };
+        lgui_layer {
+            compatible = "zmk,macro";
+            label = "LGUI_LAYER";
+            tap-ms = <0>;
+            bindings = <&kp LGUI &mo 2>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -44,7 +44,7 @@
 &kp ESC    &kp Q    &kp W   &kp E      &kp R     &kp T                                                   &kp Y     &kp U     &kp I      &kp O    &kp P       &kp LBKT
 &kp TAB    &kp A    &kp S   &kp D      &kp F     &kp G                                                   &kp H     &kp J     &kp K      &kp L    &kp SEMI    &kp SQT
 &kp LALT   &kp Z    &kp X   &kp C      &kp V     &kp B     &kp LG(SPACE)                       &kp BSPC  &kp N     &kp M     &kp COMMA  &kp DOT  &kp C_MUTE  &kp LCTRL
-                            &kp LG(V)  &kp LG(C) &kp LGUI  &macro lgui_layer  &kp SPACE          &kp ENTER &sl 1     &sk LSHFT &kp LG(Z) &kp LG(X)
+                            &kp LG(V)  &kp LG(C) &kp LGUI  &lgui_layer  &kp SPACE          &kp ENTER &sl 1     &sk LSHFT &kp LG(Z) &kp LG(X)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
