@@ -64,7 +64,7 @@
 &kp ESC    &kp Q   &kp W          &kp E      &kp R     &kp T                             &kp Y   &kp U      &kp I      &kp O      &kp P       &kp LBKT
 &kp TAB    &kp A   &kp S          &kp D      &kp F     &kp G                             &kp H   &kp J      &kp K      &kp L      &kp SEMI    &kp SQT
 &kp LALT   &kp Z   &kp X          &kp C      &kp V     &kp B   &kp LG(SPACE)  &kp BSPC   &kp N   &kp M      &kp COMMA  &kp DOT    &kp C_MUTE  &kp LCTRL
-                   &kp LA(LG(N))  &kp LG(S)  &kp LGUI  &mo 2   &kp SPACE      &kp ENTER  &sl 1   &sk LSHFT  &kp LG(R)  &kp LG(O)
+                   &kp LA(LG(N))  &kp LG(T)  &kp LGUI  &mo 2   &kp SPACE      &kp ENTER  &sl 1   &sk LSHFT  &kp LG(R)  &kp LG(O)
             >;
         };
 
@@ -118,7 +118,17 @@
 &repeat5_macro   &kp LG(TILDE)  &kp LS(LG(LEFT))   &kp LA(UP)     &kp LS(LA(LEFT))   &kp LG(LS(E))                        &kp LA(LEFT)   &kp HOME      &kp UP            &kp END        &kp LG(LS(F))  &kp LG(LS(R))
 &kp LEFT_SHIFT   &kp LS(F6)     &kp LS(LG(RIGHT))  &kp LA(DOWN)   &kp LS(LA(RIGHT))  &kp LG(A)                            &kp LA(RIGHT)  &kp LEFT      &kp DOWN          &kp RIGHT      &kp LG(LS(O))  &kp C_VOL_UP
 &kp LS(LALT)     &kp LG(FSLH)   &kp LA(ENTER)      &kp LG(LALT)   &kp LG(D)          &kp LG(B)      &kp LG(W)  &kp LG(Z)  &kp LG(LBKT)   &kp LG(RBKT)  &kp LG(LS(BSPC))  &kp LC(SPACE)  &trans         &kp C_VOL_DN
-                                &kp LC(C)          &kp LG(N)      &kp LG(T)          &trans         &trans     &kp LG(C)  &kp LG(V)      &kp LG(X)     &kp PAGE_UP       &kp PAGE_DOWN
+                                &kp LC(C)          &kp LG(N)      &kp LG(S)          &trans         &trans     &kp LG(C)  &lt 3 LG(V)    &kp LG(X)     &kp PAGE_UP       &kp PAGE_DOWN
+            >;
+        };
+
+        app_layer {
+            bindings = <
+&trans  &trans  &trans                &trans              &trans              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                &trans              &trans              &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp C_AL_SELECT_TASK  &kp C_AL_PREV_TASK  &kp C_AL_NEXT_TASK  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                &trans              &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans                &trans              &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
