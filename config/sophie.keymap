@@ -64,7 +64,7 @@
 &kp ESC    &kp Q   &kp W          &kp E      &kp R     &kp T                             &kp Y   &kp U      &kp I      &kp O      &kp P       &kp LBKT
 &kp TAB    &kp A   &kp S          &kp D      &kp F     &kp G                             &kp H   &kp J      &kp K      &kp L      &kp SEMI    &kp SQT
 &kp LALT   &kp Z   &kp X          &kp C      &kp V     &kp B   &kp LG(SPACE)  &kp BSPC   &kp N   &kp M      &kp COMMA  &kp DOT    &kp C_MUTE  &kp LCTRL
-                   &kp LA(LG(N))  &kp LG(T)  &kp LGUI  &mt LGUI MO(2)   &kp SPACE      &kp ENTER  &sl 1   &sk LSHFT  &kp LG(R)  &kp LG(O)
+                   &kp LA(LG(N))  &kp LG(T)  &kp LGUI  &mt LGUI MO(3)   &kp SPACE      &kp ENTER  &sl 1   &sk LSHFT  &kp LG(R)  &kp LG(O)
             >;
         };
 
