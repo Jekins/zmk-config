@@ -39,6 +39,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esc_combo {
+            bindings = <&kp ESC>;
+            key-positions = <13 14>;
+        };
+
+        tab_combo {
+            bindings = <&kp TAB>;
+            key-positions = <25 26>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -92,7 +106,7 @@
 &trans   &kp GRAVE  &kp UNDER  &kp MINUS  &kp EQUAL   &kp PLUS                                            &kp LBKT  &kp RBKT  &kp COLON  &kp SEMI  &kp BSLH  &kp TILDE
 &trans   &kp DLLR   &kp AMPS   &kp QMARK  &kp COMMA   &kp DOT                                             &kp LBRC  &kp RBRC  &kp LPAR   &kp RPAR  &kp PIPE  &kp AT
 &trans   &kp CARET  &kp EXCL   &kp PRCNT  &kp DQT     &kp SQT     &mkp LCLK   &mt LEFT_GUI LG(BACKSPACE)  &kp LT    &kp GT    &kp STAR   &kp HASH  &kp FSLH  &trans
-                    &trans     &trans     &kp LS(N6)  &kp LS(N7)  &kp LS(N3)  &trans                      &trans    &trans    &trans     &trans
+                    &trans     &trans     &kp LS(N6)  &kp LS(N7)  &kp LS(N3)  &to 4                       &trans    &trans    &trans     &trans
             >;
         };
 
@@ -130,6 +144,36 @@
 &trans  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(Z))))                  &trans  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &trans
 &trans  &trans                 &trans                 &trans                 &trans                 &trans                 &trans  &trans  &trans  &trans                 &trans                 &trans                 &trans                 &trans
                                &trans                 &trans                 &trans                 &trans                 &trans  &trans  &trans  &trans                 &trans                 &trans
+            >;
+        };
+
+        layer_36k {
+            bindings = <
+&trans  &trans       &trans          &trans            &trans         &trans                        &trans  &trans      &trans            &trans          &trans                 &trans
+&trans  &kp Q        &kp W           &kp E             &kp R          &kp T                         &kp Y   &kp U       &kp I             &kp O           &mt LEFT_BRACKET P     &trans
+&trans  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LGUI F     &kp G                         &kp H   &mt LGUI J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LCTRL SEMI         &trans
+&trans  &kp Z        &kp X           &kp C             &kp V          &kp B   &trans     &trans     &kp N   &kp M       &kp COMMA         &kp DOT         &mt SQT RIGHT_BRACKET  &trans
+                     &trans          &trans            &kp LG(SPACE)  &mo 6   &kp SPACE  &kp ENTER  &mo 5   &kp DELETE  &trans            &trans
+            >;
+        };
+
+        layer_numb {
+            bindings = <
+&trans  &trans         &trans  &trans        &trans   &trans                                             &trans  &trans    &trans          &trans        &trans     &trans
+&trans  &kp GRAVE      &kp N1  &kp NUMBER_2  &kp N3   &mt MINUS EQUAL                                    &trans  &trans    &trans          &trans        &trans     &trans
+&trans  &mt DOT COMMA  &kp N4  &kp N5        &kp N6   &mt RIGHT_BRACKET LEFT_BRACKET                     &trans  &kp LGUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &trans
+&trans  &kp SEMI       &kp N7  &kp N8        &kp N9   &kp N0                          &trans     &trans  &trans  &trans    &trans          &trans        &trans     &trans
+                       &trans  &trans        &kp SQT  &kp BACKSLASH                   &kp SLASH  &trans  &trans  &trans    &trans          &trans
+            >;
+        };
+
+        layer_nav {
+            bindings = <
+&trans  &trans     &trans    &trans      &trans     &trans                                    &trans                 &trans                 &trans                 &trans                 &trans                 &trans
+&trans  &trans     &trans    &trans      &trans     &trans                                    &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &trans
+&trans  &kp LCTRL  &kp LALT  &kp LSHIFT  &kp LGUI   &trans                                    &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &trans
+&trans  &trans     &trans    &trans      &mkp RCLK  &mkp LCLK  &trans  &trans                 &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &trans
+                   &trans    &trans      &trans     &trans     &trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &trans                 &trans
             >;
         };
     };
