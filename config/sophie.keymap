@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -61,11 +61,11 @@
             //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2         &kp N3     &kp N4    &kp N5                            &kp N6  &kp N7     &kp N8     &kp N9     &kp N0    &kp RBKT
-&kp ESC    &kp Q   &kp W          &kp E      &kp R     &kp T                             &kp Y   &kp U      &kp I      &kp O      &kp P     &kp LBKT
-&kp TAB    &kp A   &kp S          &kp D      &kp F     &kp G                             &kp H   &kp J      &kp K      &kp L      &kp SEMI  &kp SQT
-&kp LALT   &kp Z   &kp X          &kp C      &kp V     &kp B   &kp LG(SPACE)  &kp BSPC   &kp N   &kp M      &kp COMMA  &kp DOT    &sl 3     &kp LCTRL
-                   &kp LA(LG(N))  &kp LG(T)  &kp LGUI  &mo 2   &kp SPACE      &kp ENTER  &sl 1   &sk LSHFT  &kp LG(R)  &kp LG(O)
+&kp GRAVE  &kp N1  &kp N2         &kp N3            &kp N4      &kp N5                            &kp N6  &kp N7      &kp N8            &kp N9              &kp N0    &kp RBKT
+&kp ESC    &kp Q   &kp W          &kp E             &kp R       &kp T                             &kp Y   &kp U       &kp I             &kp O               &kp P     &kp LBKT
+&kp TAB    &kp A   &kp S          &mt LEFT_SHIFT D  &mt LGUI F  &kp G                             &kp H   &mt LGUI J  &mt LEFT_SHIFT K  &mt LEFT_CONTROL L  &kp SEMI  &kp SQT
+&kp LALT   &kp Z   &kp X          &kp C             &kp V       &kp B   &kp LG(SPACE)  &kp BSPC   &kp N   &kp M       &kp COMMA         &kp DOT             &sl 3     &kp LCTRL
+                   &kp LA(LG(N))  &kp LG(T)         &kp LGUI    &mo 2   &kp SPACE      &kp ENTER  &sl 1   &sk LSHFT   &kp LG(R)         &kp LG(O)
             >;
         };
 
@@ -88,11 +88,11 @@
             //                         |-------+-------+-------+-------+-------|    |-------+-------+-------+-------+-------|
 
             bindings = <
-&kp F12  &kp F1     &kp F2     &kp F3          &kp F4      &kp F5                                              &kp F6    &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
-&trans   &kp GRAVE  &kp UNDER  &kp MINUS       &kp EQUAL   &kp PLUS                                            &kp LBKT  &kp RBKT  &kp COLON  &kp SEMI  &kp BSLH  &kp TILDE
-&trans   &kp DLLR   &kp AMPS   &kp QMARK       &kp COMMA   &kp DOT                                             &kp LBRC  &kp RBRC  &kp LPAR   &kp RPAR  &kp PIPE  &kp AT
-&trans   &kp CARET  &kp EXCL   &kp PRCNT       &kp DQT     &kp SQT     &kp TAB     &mt LEFT_GUI LG(BACKSPACE)  &kp LT    &kp GT    &kp STAR   &kp HASH  &kp FSLH  &trans
-                    &kp LANG2  &kt LANGUAGE_1  &kp LS(N6)  &kp LS(N7)  &kp LS(N3)  &trans                      &trans    &trans    &trans     &trans
+&kp F12  &kp F1     &kp F2     &kp F3     &kp F4      &kp F5                                              &kp F6    &kp F7    &kp F8     &kp F9    &kp F10   &kp F11
+&trans   &kp GRAVE  &kp UNDER  &kp MINUS  &kp EQUAL   &kp PLUS                                            &kp LBKT  &kp RBKT  &kp COLON  &kp SEMI  &kp BSLH  &kp TILDE
+&trans   &kp DLLR   &kp AMPS   &kp QMARK  &kp COMMA   &kp DOT                                             &kp LBRC  &kp RBRC  &kp LPAR   &kp RPAR  &kp PIPE  &kp AT
+&trans   &kp CARET  &kp EXCL   &kp PRCNT  &kp DQT     &kp SQT     &mkp LCLK   &mt LEFT_GUI LG(BACKSPACE)  &kp LT    &kp GT    &kp STAR   &kp HASH  &kp FSLH  &trans
+                    &trans     &trans     &kp LS(N6)  &kp LS(N7)  &kp LS(N3)  &trans                      &trans    &trans    &trans     &trans
             >;
         };
 
@@ -126,7 +126,7 @@
         app_layer {
             bindings = <
 &trans  &trans                 &trans                 &trans                 &trans                 &trans                                 &trans  &trans                 &trans                 &trans                 &trans                 &trans
-&trans  &trans                 &trans                 &trans                 &kp LG(LS(N4))         &trans                                 &trans  &kp LS(LG(N5))         &trans                 &trans                 &trans                 &trans
+&trans  &trans                 &mkp LCLK              &mkp RCLK              &kp LG(LS(N4))         &trans                                 &trans  &kp LS(LG(N5))         &trans                 &trans                 &trans                 &trans
 &trans  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(Z))))                  &trans  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &trans
 &trans  &trans                 &trans                 &trans                 &trans                 &trans                 &trans  &trans  &trans  &trans                 &trans                 &trans                 &trans                 &trans
                                &trans                 &trans                 &trans                 &trans                 &trans  &trans  &trans  &trans                 &trans                 &trans
