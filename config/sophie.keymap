@@ -169,11 +169,11 @@
 
         layer_nav {
             bindings = <
-&trans  &trans     &trans    &trans      &trans     &trans                                    &trans                 &trans                 &trans                 &trans                 &trans                 &trans
-&trans  &trans     &trans    &trans      &trans     &trans                                    &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &trans
-&trans  &kp LCTRL  &kp LALT  &kp LSHIFT  &kp LGUI   &trans                                    &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &trans
-&trans  &trans     &trans    &trans      &mkp RCLK  &mkp LCLK  &trans  &trans                 &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &trans
-                   &trans    &trans      &trans     &trans     &trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &trans                 &trans
+&trans  &trans     &trans    &trans      &trans       &trans                                    &trans                 &trans                 &trans                 &trans                 &trans                 &trans
+&trans  &trans     &trans    &trans      &key_repeat  &trans                                    &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &trans
+&trans  &kp LCTRL  &kp LALT  &kp LSHIFT  &kp LGUI     &trans                                    &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &trans
+&trans  &trans     &trans    &trans      &mkp RCLK    &mkp LCLK  &trans  &trans                 &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &trans
+                   &trans    &trans      &trans       &trans     &trans  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &trans                 &trans
             >;
         };
     };
