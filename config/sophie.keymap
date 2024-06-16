@@ -44,7 +44,7 @@
 
         esc_combo {
             bindings = <&kp ESC>;
-            key-positions = <16 15>;
+            key-positions = <3 4>;
         };
     };
 
@@ -154,11 +154,11 @@
 
         layer_numb {
             bindings = <
-&none  &none          &none   &none   &none    &none                                              &none   &none     &none           &none         &none      &none
-&none  &kp GRAVE      &kp N1  &kp N2  &kp N3   &mt MINUS EQUAL                                    &none   &none     &none           &none         &none      &none
-&none  &mt DOT COMMA  &kp N4  &kp N5  &kp N6   &mt RIGHT_BRACKET LEFT_BRACKET                     &none   &kp LGUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &none
-&none  &kp SEMI       &kp N7  &kp N8  &kp N9   &kp N0                          &none      &none   &none   &none     &none           &none         &none      &none
-                      &none   &none   &kp SQT  &kp BACKSLASH                   &kp SLASH  &trans  &trans  &trans    &none           &none
+&none  &none          &none   &none   &none    &none                                              &none    &none     &none           &none         &none      &none
+&none  &kp GRAVE      &kp N1  &kp N2  &kp N3   &mt MINUS EQUAL                                    &none    &none     &none           &none         &none      &none
+&none  &mt DOT COMMA  &kp N4  &kp N5  &kp N6   &mt RIGHT_BRACKET LEFT_BRACKET                     &kp ESC  &kp LGUI  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &none
+&none  &kp SEMI       &kp N7  &kp N8  &kp N9   &kp N0                          &none      &none   &none    &none     &none           &none         &none      &none
+                      &none   &none   &kp SQT  &kp BACKSLASH                   &kp SLASH  &trans  &trans   &trans    &none           &none
             >;
         };
 
