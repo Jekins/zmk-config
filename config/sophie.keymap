@@ -175,21 +175,21 @@
 
         layer_numb {
             bindings = <
-&none  &none              &none          &none                  &none            &none                                 &none         &none         &none             &none         &none           &none
-&none  &kp GRAVE          &kp PIPE       &kp PERCENT            &kp DOLLAR       &kp EXCLAMATION                       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp N5          &none
-&none  &kp SQT            &kp SLASH      &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET                      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0    &none
-&none  &kp DOUBLE_QUOTES  &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &none      &none   &kp QUESTION  &kp AT_SIGN   &kp LS(NUMBER_6)  &kp LS(N7)    &kp LEFT_SHIFT  &none
-                          &none          &none                  &kp AMPERSAND    &kp MINUS          &kp EQUAL  &trans  &trans        &kp POUND     &none             &none
+&none  &none             &none                &none                        &none                 &none                                      &none         &none         &none             &none         &none         &none
+&none  &kp GRAVE         &kp PIPE             &kp PERCENT                  &kp DOLLAR            &kp EXCLAMATION                            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp N5        &none
+&none  &hml LCTRL EQUAL  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET                           &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0  &none
+&none  &kp PLUS          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET  &none           &none   &kp QUESTION  &kp AT_SIGN   &kp LS(NUMBER_6)  &kp LS(N7)    &kp ASTERISK  &none
+                         &none                &none                        &kp AMPERSAND         &kp MINUS          &kp UNDERSCORE  &trans  &trans        &kp POUND     &none             &none
             >;
         };
 
         layer_nav {
             bindings = <
-&none  &none                   &none                    &none               &none                &none                                         &none                  &none                  &none                  &none                  &none                  &none
-&none  &kp LG(LS(LEFT_ARROW))  &kp LS(LG(RIGHT_ARROW))  &kp LA(UP_ARROW)    &kp LA(DOWN_ARROW)   &repeat5_macro                                &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &none
-&none  &kp LCTRL               &kp LALT                 &kp LSHIFT          &kp LGUI             &mkp LCLK                                     &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &none
-&none  &kp ESCAPE              &kp LG(GRAVE)            &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &mkp RCLK       &none  &none                  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(Z)))      &none
-                               &none                    &none               &trans               &trans          &to 0  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &none                  &none
+&none  &none                        &none                        &none                       &none                      &none                                         &none                  &none                  &none                  &none                  &none                  &none
+&none  &kp LS(LA(LEFT_ARROW))       &kp LS(LA(RIGHT_ARROW))      &kp LA(UP_ARROW)            &kp LA(DOWN_ARROW)         &repeat5_macro                                &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &none
+&none  &hml LCTRL LG(LEFT_BRACKET)  &hml LALT LG(RIGHT_BRACKET)  &hml LSHIFT LA(LEFT_ARROW)  &hml LGUI LA(RIGHT_ARROW)  &mkp LCLK                                     &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &none
+&none  &kp ESCAPE                   &kp LG(GRAVE)                &kp LA(LG(N))               &kp LA(LG(J))              &mkp RCLK       &none  &none                  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(Z)))      &none
+                                    &none                        &none                       &trans                     &trans          &to 0  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &none                  &none
             >;
         };
     };
