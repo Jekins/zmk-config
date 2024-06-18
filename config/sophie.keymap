@@ -39,14 +39,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        esc_combo {
-            bindings = <&kp ESC>;
-            key-positions = <3 4>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         hmr: hmr {
@@ -60,6 +53,19 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
         };
     };
 
@@ -159,31 +165,31 @@
 
         layer_36k {
             bindings = <
-&none  &none        &none           &none             &none       &none                        &none  &none          &none              &none            &none                  &none
-&none  &kp Q        &kp W           &kp E             &kp R       &kp T                        &kp Y  &kp U          &kp I              &kp O            &mt LEFT_BRACKET P     &none
-&none  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LGUI F  &kp G                        &kp H  &hmr LGUI J    &hmr LEFT_SHIFT K  &hmr LEFT_ALT L  &hmr LCTRL SEMI        &none
-&none  &kp Z        &kp X           &kp C             &kp V       &kp B  &none      &none      &kp N  &kp M          &kp COMMA          &kp DOT          &mt SQT RIGHT_BRACKET  &none
-                    &none           &none             &kp TAB     &to 6  &kp SPACE  &kp ENTER  &sl 5  &kp BACKSPACE  &none              &none
+&none  &none         &none            &none              &none        &none                        &none  &none          &none              &none            &none                  &none
+&none  &kp Q         &kp W            &kp E              &kp R        &kp T                        &kp Y  &kp U          &kp I              &kp O            &mt LEFT_BRACKET P     &none
+&none  &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G                        &kp H  &hmr LGUI J    &hmr LEFT_SHIFT K  &hmr LEFT_ALT L  &hmr LCTRL SEMI        &none
+&none  &kp Z         &kp X            &kp C              &kp V        &kp B  &none      &none      &kp N  &kp M          &kp COMMA          &kp DOT          &mt SQT RIGHT_BRACKET  &none
+                     &none            &none              &kp TAB      &mo 6  &kp SPACE  &kp ENTER  &sl 5  &kp BACKSPACE  &none              &none
             >;
         };
 
         layer_numb {
             bindings = <
-&none  &none        &none          &none                  &none            &none                                 &none         &none         &none           &none         &none         &none
-&none  &kp GRAVE    &kp POUND      &kp PERCENT            &kp DOLLAR       &kp EXCLAMATION                       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5        &none
-&none  &kp SQT      &kp BACKSLASH  &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET                      &kp ESCAPE    &kp LGUI      &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL     &none
-&none  &kp AT_SIGN  &kp SLASH      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &none      &none   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0  &none
-                    &none          &none                  &kp AMPERSAND    &kp MINUS          &kp EQUAL  &trans  &trans        &trans        &none           &none
+&none  &none              &none          &none                  &none            &none                                 &none         &none         &none             &none         &none           &none
+&none  &kp GRAVE          &kp PIPE       &kp PERCENT            &kp DOLLAR       &kp EXCLAMATION                       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp N5          &none
+&none  &kp SQT            &kp SLASH      &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET                      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0    &none
+&none  &kp DOUBLE_QUOTES  &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &none      &none   &kp QUESTION  &kp AT_SIGN   &kp LS(NUMBER_6)  &kp LS(N7)    &kp LEFT_SHIFT  &none
+                          &none          &none                  &kp AMPERSAND    &kp MINUS          &kp EQUAL  &trans  &trans        &kp POUND     &none             &none
             >;
         };
 
         layer_nav {
             bindings = <
-&none  &none      &none     &none       &none           &none                                    &none                  &none                  &none                  &none                  &none                  &none
-&none  &none      &none     &none       &repeat5_macro  &none                                    &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &none
-&none  &kp LCTRL  &kp LALT  &kp LSHIFT  &kp LGUI        &mkp LCLK                                &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &none
-&none  &none      &none     &none       &trans          &mkp RCLK  &none  &none                  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(Z)))      &none
-                  &none     &none       &trans          &trans     &to 0  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &none                  &none
+&none  &none                   &none                    &none               &none                &none                                         &none                  &none                  &none                  &none                  &none                  &none
+&none  &kp LG(LS(LEFT_ARROW))  &kp LS(LG(RIGHT_ARROW))  &kp LA(UP_ARROW)    &kp LA(DOWN_ARROW)   &repeat5_macro                                &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))  &none
+&none  &kp LCTRL               &kp LALT                 &kp LSHIFT          &kp LGUI             &mkp LCLK                                     &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)             &none
+&none  &kp ESCAPE              &kp LG(GRAVE)            &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &mkp RCLK       &none  &none                  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(Z)))      &none
+                               &none                    &none               &trans               &trans          &to 0  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &none                  &none
             >;
         };
     };
