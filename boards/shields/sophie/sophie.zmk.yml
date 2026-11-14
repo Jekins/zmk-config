@@ -9,6 +9,8 @@ features:
   - keys
   - display
   - encoder
+  - underglow
+  - studio
 siblings:
   - sophie_left
   - sophie_right
